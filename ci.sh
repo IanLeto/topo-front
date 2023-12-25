@@ -1,1 +1,2 @@
-npm i element-ui@next -D
+docker build -t ianleto/topo-front .
+docker push ianleto/topo-front
