@@ -1,16 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>1</h1>
-    <el-bu></el-bu>
-    <router-view/>
+
+    <h1>1{{ message }}</h1>
   </div>
 </template>
+
+<script>
+  import {reactive} from "vue";
+  let message = 'hello'
+  const counter = reactive({
+    count: 0
+  })
+  console.log(counter.count)
+  counter.count++
+
+</script>
 
 <script>
 export default {
   name: 'App'
 }
+
 </script>
 
 <style>
