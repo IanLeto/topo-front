@@ -1,20 +1,8 @@
 <template>
   <div id="app">
-
-    <h1>1{{ message }}</h1>
+    <h1>1{{ message() }}</h1>
   </div>
 </template>
-
-<script>
-  import {reactive} from "vue";
-  let message = 'hello'
-  const counter = reactive({
-    count: 0
-  })
-  console.log(counter.count)
-  counter.count++
-
-</script>
 
 <script>
 export default {
