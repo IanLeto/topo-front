@@ -1,15 +1,31 @@
 <template>
   <div id="app">
-    <h1>1{{ message() }}</h1>
+    <img src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <el-button @click="" >Button1</el-button>
+    <div>
+      <el-radio v-model="radio" label="1">备选项</el-radio>
+    </div>
+
   </div>
+
 </template>
 
-<script>
-export default {
+<script type="module">
+import {ref} from 'vue'
+
+export default { // 由于脚手架的原因，这里的export default是必须的
   name: 'App'
 }
+const dynamicId = 'foo'
+const meg = 'foo'
+const titleObj = ref('title')
+console.log(titleObj.value)
+
+
 
 </script>
+
 
 <style>
 
