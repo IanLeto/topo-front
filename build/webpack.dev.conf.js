@@ -1,17 +1,17 @@
-'use strict'
-const utils = require('./utils')
+'use strict' // 使用严格模式
+const utils = require('./utils') // 引入工具函数
 const webpack = require('webpack')
 const config = require('../config')
-const merge = require('webpack-merge')
-const path = require('path')
+const merge = require('webpack-merge') // 引入webpack-merge模块，用于合并两个或更多的配置对象。
+const path = require('path') // 引入node的path模块 引入path模块，用于操作文件路径。
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-const HOST = process.env.HOST
-const PORT = process.env.PORT && Number(process.env.PORT)
+const HOST = process.env.HOST // process.env是node.js的一个全局对象，包含了当前shell的所有环境变量，比如process.env.HOME。
+const PORT = process.env.PORT && Number(process.env.PORT) // 从环境变量获取端口号，并将其转换为数字。
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
