@@ -1,23 +1,25 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <el-button @click="" >Button1</el-button>
+    <el-button @click="">Button1</el-button>
     <div>
-      <p> {{msg}}</p>
+      <p> {{ msg }}</p>
     </div>
   </div>
 
 </template>
 
 <script src="">
- export default {
-   // name: 'App',
-   data() {
-     return {
-       msg: '1'
-     }
-   }
- }
+import {ref} from 'vue'
+
+const ian = {}
+ian.data = function () {
+  return {
+    msg: '2'
+  }
+}
+
+export default ian
 </script>
 
 
@@ -31,7 +33,6 @@
 <!--// const meg = 'foo'-->
 <!--// const titleObj = ref('title')-->
 <!--// console.log(titleObj.value)-->
-
 
 
 <!--</script>-->
