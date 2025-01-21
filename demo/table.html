@@ -1,0 +1,25 @@
+<script src="//unpkg.com/vue@2/dist/vue.js"></script>
+<script src="//unpkg.com/element-ui@2.15.14/lib/index.js"></script>
+<div id="app">
+  <template>
+    <el-table
+      :data="tableData"
+      stripe
+      style="width: 100%">
+      <el-table-column
+        prop="date"
+        label="Date"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        prop="name"
+        label="Name"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        prop="address"
+        label="Address">
+      </el-table-column>
+    </el-table>
+  </template>
+</div>
